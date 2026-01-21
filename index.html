@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethics & Governance - Kisaan Infotech Limited</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #2d3748;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .whistleblower-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .whistleblower-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .contact-info {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .contact-info h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #4a5568;
+            margin: 5px 0;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            color: #4a5568;
+        }
+
+        .policy-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .policy-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .policy-links a:hover {
+            color: #764ba2;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .principle-item {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .principle-item h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .principle-item p {
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                max-width: 200px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .hero h2 {
+                font-size: 1.5em;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://kisaaninfotech.com/Images/KisaanInfotech.svg" alt="Kisaan Infotech Limited">
+            </div>
+            <h1>Ethics & Governance Portal</h1>
+            <p class="subtitle">Building Trust Through Integrity and Transparency</p>
+        </header>
+
+        <div class="hero">
+            <h2>Our Commitment to Ethical Excellence</h2>
+            <p>At Kisaan Infotech Limited, we believe that ethical conduct is the foundation of sustainable business success. Our commitment to integrity, transparency, and accountability guides everything we do.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Code of Conduct</h3>
+                <p>Our comprehensive code of conduct sets the standards for ethical behavior across all levels of our organization.</p>
+                <a href="#code-of-conduct" class="btn">View Code</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Corporate Governance</h3>
+                <p>We maintain the highest standards of corporate governance to protect stakeholder interests and ensure accountability.</p>
+                <a href="#governance" class="btn">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚖️</div>
+                <h3>Compliance Framework</h3>
+                <p>Our robust compliance framework ensures adherence to all applicable laws, regulations, and industry standards.</p>
+                <a href="#compliance" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Whistleblower Policy</h3>
+                <p>Speak up confidentially about any concerns regarding unethical conduct or violations of our policies.</p>
+                <a href="#whistleblower" class="btn">Report Concern</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Stakeholder Relations</h3>
+                <p>We are committed to fair and transparent dealings with all our stakeholders including employees, customers, and partners.</p>
+                <a href="#stakeholders" class="btn">Read More</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Annual Reports</h3>
+                <p>Access our annual reports, financial statements, and disclosures for complete transparency in our operations.</p>
+                <a href="#reports" class="btn">View Reports</a>
+            </div>
+        </div>
+
+        <div class="whistleblower-section" id="whistleblower">
+            <h2>🔔 Whistleblower & Ethics Helpline</h2>
+            <p>We encourage all stakeholders to report any concerns regarding unethical conduct, fraud, or violations of our Code of Conduct. All reports are treated with strict confidentiality and no retaliation will be tolerated against anyone who raises a concern in good faith.</p>
+
+            <div class="principles">
+                <div class="principle-item">
+                    <h4>Confidentiality Assured</h4>
+                    <p>Your identity will be protected to the fullest extent possible under law.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>No Retaliation</h4>
+                    <p>We strictly prohibit retaliation against anyone who reports concerns in good faith.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Anonymous Reporting</h4>
+                    <p>You may choose to report anonymously if you prefer.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Prompt Investigation</h4>
+                    <p>All reports are investigated thoroughly and promptly by appropriate authorities.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h4>How to Report</h4>
+                <p><strong>Email:</strong> ethics@kisaaninfotech.com</p>
+                <p><strong>Phone:</strong> +91-XXX-XXX-XXXX (24/7 Helpline)</p>
+                <p><strong>Mail:</strong> Chief Ethics Officer, Kisaan Infotech Limited</p>
+                <p style="margin-top: 15px; font-style: italic;">You may also report concerns directly to the Audit Committee Chairman at: auditcommittee@kisaaninfotech.com</p>
+            </div>
+        </div>
+
+        <div class="whistleblower-section">
+            <h2>Our Core Ethical Principles</h2>
+            <div class="principles">
+                <div class="principle-item">
+                    <h4>Integrity</h4>
+                    <p>We conduct business with honesty and transparency in all our dealings.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Accountability</h4>
+                    <p>We take responsibility for our actions and decisions.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Fairness</h4>
+                    <p>We treat all stakeholders with respect and equity.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Transparency</h4>
+                    <p>We maintain open and honest communication with stakeholders.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Compliance</h4>
+                    <p>We adhere to all applicable laws, regulations, and standards.</p>
+                </div>
+                <div class="principle-item">
+                    <h4>Social Responsibility</h4>
+                    <p>We contribute positively to society and the environment.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3 style="color: #2d3748; margin-bottom: 20px;">Key Policies & Documents</h3>
+            <div class="policy-links">
+                <a href="#">Code of Conduct for Directors</a>
+                <a href="#">Code of Conduct for Employees</a>
+                <a href="#">Whistleblower Policy</a>
+                <a href="#">Anti-Corruption Policy</a>
+                <a href="#">Conflict of Interest Policy</a>
+                <a href="#">Related Party Transaction Policy</a>
+                <a href="#">Risk Management Policy</a>
+                <a href="#">CSR Policy</a>
+            </div>
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                © 2026 Kisaan Infotech Limited. All Rights Reserved.<br>
+                For queries, contact: <a href="mailto:compliance@kisaaninfotech.com" style="color: #667eea;">compliance@kisaaninfotech.com</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
